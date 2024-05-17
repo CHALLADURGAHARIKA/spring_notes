@@ -1,79 +1,89 @@
-package com.nkxgen.spring.orm.model;
+package Emp;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-//import org.hibernate.annotations.Table;
-import javax.persistence.*;
-
-@Entity
-@Table(name = "EMP")
 public class Employee {
-	
-	@Id
-	private Integer empNo;
-	private Integer deptNo;
-	private String eName;
-	private String job;
-	
-	@Column(name = "sal")
-	private Double salary;
-	
+	int empno;
+	String ename;
+	String job;
+	int mgr;
+	String date;
+	double salary;
+	double comm;
+	int deptno;
 
-	public Employee() {
+	public Employee(int a, String b, String c, int d, String e, double f, double g, int h) {
+		empno = a;
+		ename = b;
+		job = c;
+		mgr = d;
+		date = e;
+		salary = f;
+		comm = g;
+		deptno = h;
 	}
 
-	public Employee(Integer eno, Integer dno, String enm, String jb,Double sal) {
-		this.empNo = eno;
-		this.eName = enm;
-		this.job = jb;
-		this.salary = sal;
-		this.deptNo=dno;
+	public int getEmpno() {
+		return empno;
 	}
 
-	public Integer getEmpNo() {
-		return empNo;
-	}
-
-	public void setEmpNo(Integer eno) {
-		this.empNo=eno;
-	}
-
-	public Integer getDeptNo() {
-		return deptNo;
-	}
-
-	public void setDeptNo(Integer dno) {
-		this.deptNo = dno;
-	}
-
-	public String getEName() {
-		return eName;
-	}
-
-	public void setEName(String enm) {
-		this.eName = enm;
+	public String getEname() {
+		return ename;
 	}
 
 	public String getJob() {
 		return job;
 	}
-	public void setJob(String jb) {
-		this.job = jb;
+
+	public int getMgr() {
+		return mgr;
 	}
-	
-	public Double getSalary() {
+
+	public String getDate() {
+		return date;
+	}
+
+	public double getSalary() {
 		return salary;
 	}
 
-	public void setSalary(double sal) {
-		this.salary = sal;
+	public double getComm() {
+		return comm;
 	}
-	
-	@Override
-	public String toString() {
-		return "Employee{" + "Emp No=" + empNo + ", deptNo=" + deptNo + ", EmpName='" + eName + '\'' + ", job='" + job
-				+ '\'' + '}';
+
+	public int getDeptno() {
+		return deptno;
+	}
+
+	public void setEmpno(int empno) {
+		this.empno = empno;
+	}
+
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+
+	public void setJob(String job) {
+		this.job = job;
+	}
+
+	public void setMgr(int mgr) {
+		this.mgr = mgr;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public void setComm(double comm) {
+		this.comm = comm;
+	}
+
+	public void setDeptno(int deptno) {
+		this.deptno = deptno;
 	}
 
 }
+
